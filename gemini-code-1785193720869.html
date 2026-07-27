@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aurelia International Montessori School | Belda</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts: Poppins & Nunito -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy-blue: #123B74;
+      --sky-blue: #5DB8FF;
+      --sunshine-yellow: #FFD54F;
+      --soft-green: #B8E986;
+      --light-bg: #F8FAFC;
+    }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, .navbar-brand {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Floating WhatsApp Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background-color: #25d366;
+      color: #FFF;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+      z-index: 1000;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      color: white;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #ffffff;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+    }
+    .nav-link {
+      font-weight: 600;
+      color: var(--navy-blue) !important;
+      margin: 0 5px;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      background: linear-gradient(rgba(18, 59, 116, 0.75), rgba(18, 59, 116, 0.75)), url('https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&q=80') center/cover no-repeat;
+      padding: 120px 0 80px 0;
+      color: white;
+    }
+    .btn-custom-primary {
+      background-color: var(--sky-blue);
+      color: white;
+      font-weight: 700;
+      border-radius: 30px;
+      padding: 12px 30px;
+      border: none;
+    }
+    .btn-custom-primary:hover {
+      background-color: #3b9deb;
+      color: white;
+    }
+    .btn-custom-warning {
+      background-color: var(--sunshine-yellow);
+      color: #333;
+      font-weight: 700;
+      border-radius: 30px;
+      padding: 12px 30px;
+      border: none;
+    }
+
+    /* Feature Cards */
+    .feature-card {
+      background: white;
+      border-radius: 15px;
+      padding: 25px;
+      transition: transform 0.3s ease;
+      border: 1px solid #E2E8F0;
+    }
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    }
+    .feature-icon {
+      font-size: 2.5rem;
+      color: var(--navy-blue);
+      margin-bottom: 15px;
+    }
+
+    /* Program Cards */
+    .program-card {
+      border: none;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+    }
+    .program-card:hover {
+      transform: translateY(-8px);
+    }
+
+    /* Counters */
+    .counter-section {
+      background-color: var(--navy-blue);
+      color: white;
+      padding: 60px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/918293325236" class="whatsapp-float" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg sticky-top navbar-light">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-primary" style="color: var(--navy-blue) !important;" href="#">
+        <i class="fa-solid fa-shapes text-warning me-2"></i>Aurelia International
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-links navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#programs">Programs</a></li>
+          <li class="nav-item"><a class="nav-link" href="#facilities">Facilities</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+        <a href="#admission" class="btn btn-custom-primary ms-lg-3">Apply Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section text-center" id="home">
+    <div class="container" data-aos="fade-up">
+      <span class="badge bg-warning text-dark px-3 py-2 rounded-pill mb-3 fw-bold">Academic Session 2026–27 Open</span>
+      <h1 class="display-3 fw-bold mb-3">Aurelia International Montessori School</h1>
+      <p class="lead mb-4">Where Every Child Learns, Grows & Shines<br><strong>Play • Explore • Imagine • Create</strong></p>
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <a href="#admission" class="btn btn-custom-primary"><i class="fa-solid fa-paper-plane me-2"></i>Apply for Admission</a>
+        <a href="#contact" class="btn btn-custom-warning"><i class="fa-solid fa-calendar-check me-2"></i>Book a School Visit</a>
+      </div>
+
+      <!-- Quick Program Tags -->
+      <div class="row mt-5 pt-4 justify-content-center">
+        <div class="col-6 col-md-2 mb-2"><div class="bg-white text-dark py-2 px-3 rounded-pill fw-bold shadow-sm">👶 Toddler</div></div>
+        <div class="col-6 col-md-2 mb-2"><div class="bg-white text-dark py-2 px-3 rounded-pill fw-bold shadow-sm">🌈 Nursery</div></div>
+        <div class="col-6 col-md-2 mb-2"><div class="bg-white text-dark py-2 px-3 rounded-pill fw-bold shadow-sm">📚 LKG</div></div>
+        <div class="col-6 col-md-2 mb-2"><div class="bg-white text-dark py-2 px-3 rounded-pill fw-bold shadow-sm">🎓 UKG</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="py-5 bg-light">
+    <div class="container py-4">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <h2 class="fw-bold" style="color: var(--navy-blue);">Why Parents Choose Aurelia</h2>
+        <p class="text-muted">Building a strong foundation in a safe and joyful environment</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-card text-center h-100">
+            <div class="feature-icon"><i class="fa-solid fa-puzzle-piece" style="color: #FF6B6B;"></i></div>
+            <h5 class="fw-bold">Play-Based Learning</h5>
+            <p class="text-muted mb-0">Hands-on Montessori materials encouraging active discovery and independent thinking.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-card text-center h-100">
+            <div class="feature-icon"><i class="fa-solid fa-shield-halved" style="color: #4ECDC4;"></i></div>
+            <h5 class="fw-bold">Safe & Secure Campus</h5>
+            <p class="text-muted mb-0">Complete CCTV surveillance, safe drinking water, and child-proof premises.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="feature-card text-center h-100">
+            <div class="feature-icon"><i class="fa-solid fa-brain" style="color: #FFE66D;"></i></div>
+            <h5 class="fw-bold">Brain Development</h5>
+            <p class="text-muted mb-0">Structured phonics, early numeracy, stem tasks, and life skills integration.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Animated Counter Section -->
+  <section class="counter-section text-center">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-6 col-md-3">
+          <h2 class="fw-bold display-4">150+</h2>
+          <p class="mb-0">Happy Students</p>
+        </div>
+        <div class="col-6 col-md-3">
+          <h2 class="fw-bold display-4">15+</h2>
+          <p class="mb-0">Qualified Teachers</p>
+        </div>
+        <div class="col-6 col-md-3">
+          <h2 class="fw-bold display-4">25+</h2>
+          <p class="mb-0">Learning Activities</p>
+        </div>
+        <div class="col-6 col-md-3">
+          <h2 class="fw-bold display-4">100%</h2>
+          <p class="mb-0">Parent Satisfaction</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Programs -->
+  <section class="py-5" id="programs">
+    <div class="container py-4">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <h2 class="fw-bold" style="color: var(--navy-blue);">Our Academic Programs</h2>
+        <p class="text-muted">Tailored learning paths for every stage of early childhood</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-3" data-aos="zoom-in" data-aos-delay="100">
+          <div class="card program-card h-100">
+            <div class="card-body text-center p-4">
+              <span class="fs-1">👶</span>
+              <h4 class="fw-bold mt-2">Toddler</h4>
+              <p class="badge bg-light text-dark">Age 1.5–2.5 Years</p>
+              <p class="text-muted small">Focus on sensory exploration, motor skills, and social adaptability.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="zoom-in" data-aos-delay="200">
+          <div class="card program-card h-100">
+            <div class="card-body text-center p-4">
+              <span class="fs-1">🌈</span>
+              <h4 class="fw-bold mt-2">Nursery</h4>
+              <p class="badge bg-light text-dark">Age 2.5–4 Years</p>
+              <p class="text-muted small">Language building, self-expression, creative art, and foundational routine.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="zoom-in" data-aos-delay="300">
+          <div class="card program-card h-100">
+            <div class="card-body text-center p-4">
+              <span class="fs-1">📚</span>
+              <h4 class="fw-bold mt-2">LKG</h4>
+              <p class="badge bg-light text-dark">Age 4–5 Years</p>
+              <p class="text-muted small">Introduction to structured phonics, early numeracy, and logic games.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="zoom-in" data-aos-delay="400">
+          <div class="card program-card h-100">
+            <div class="card-body text-center p-4">
+              <span class="fs-1">🎓</span>
+              <h4 class="fw-bold mt-2">UKG</h4>
+              <p class="badge bg-light text-dark">Age 5–6 Years</p>
+              <p class="text-muted small">Primary school readiness with comprehensive reading, math, and STEM.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-4 text-white text-center" style="background-color: var(--navy-blue);">
+    <div class="container">
+      <p class="mb-1 fw-bold">Aurelia International Montessori School, Belda</p>
+      <p class="small text-white-50 mb-0">&copy; 2026 Aurelia International. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+  </script>
+</body>
+</html>
